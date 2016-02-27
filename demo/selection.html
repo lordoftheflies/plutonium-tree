@@ -33,7 +33,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <link rel="import" href="../../paper-menu/paper-menu.html">
   <link rel="import" href="../../paper-item/paper-item.html">
   <link rel="import" href="../../paper-badge/paper-badge.html">
-  <link rel="import" href="../iron-list.html">
+  <link rel="import" href="../plutonium-tree.html">
 
   <dom-module id="x-app">
 
@@ -184,7 +184,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       <iron-ajax url="data/contacts.json" last-response="{{data}}" auto></iron-ajax>
 
       <app-toolbar>
-        <div title>Selection using iron-list</div>
+        <div title>Selection using plutonium-tree</div>
         <div>
           <paper-icon-button icon="icons:star" alt="Starred" on-tap="_toggleStarredView"></paper-icon-button>
           <paper-badge label$="[[selectedItems.length]]"></paper-badge>
@@ -193,7 +193,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
       <div class="twoColumns">
         <!-- Main List for the items -->
-        <iron-list id="itemsList" items="[[data]]" selected-items="{{selectedItems}}" selection-enabled multi-selection>
+        <plutonium-tree id="itemsList" items="[[data]]" selected-items="{{selectedItems}}" selection-enabled multi-selection>
           <template>
             <div>
               <div tabindex$="[[tabIndex]]" aria-label$="Select/Deselect [[item.name]]" class$="[[_computedClass(selected)]]">
@@ -209,17 +209,17 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
               <div class="border"></div>
             </div>
           </template>
-        </iron-list>
+        </plutonium-tree>
         <div id="starredView" hidden$="[[!showSelection]]">
           <template is="dom-if" if="[[!selectedItems.length]]">
             <div class="noSelection">Select a contact</div>
           </template>
           <!-- List for the selected items -->
-          <iron-list id="selectedItemsList" items="[[selectedItems]]" hidden$="[[!selectedItems.length]]">
+          <plutonium-tree id="selectedItemsList" items="[[selectedItems]]" hidden$="[[!selectedItems.length]]">
             <template>
               <paper-item tabindex$="[[tabIndex]]" on-tap="_unselect" aria-label$="Deselect [[item.name]]">[[item.name]]</paper-item>
             </template>
-          </iron-list>
+          </plutonium-tree>
         </div>
       </div>
     </template>

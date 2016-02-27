@@ -12,7 +12,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <html id="html">
 <head>
 
-  <title>iron-list demo</title>
+  <title>plutonium-tree demo</title>
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=no">
@@ -30,7 +30,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <link rel="import" href="../../iron-ajax/iron-ajax.html">
   <link rel="import" href="../../iron-icons/iron-icons.html">
   <link rel="import" href="../../iron-image/iron-image.html">
-  <link rel="import" href="../iron-list.html">
+  <link rel="import" href="../plutonium-tree.html">
 
   <style is="custom-style">
     body {
@@ -75,7 +75,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       height: 148px;
     }
 
-    iron-list {
+    plutonium-tree {
       padding-top: 148px;
       margin-top: 64px;
       padding-bottom: 16px;
@@ -138,17 +138,17 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       <app-header condenses fixed effects="resize-title blend-background waterfall">
         <app-toolbar>
           <paper-icon-button icon="menu" drawer-toggle></paper-icon-button>
-          <h4 condensed-title>iron-list <i>&mdash; Demo</i></h4>
+          <h4 condensed-title>plutonium-tree <i>&mdash; Demo</i></h4>
           <paper-icon-button icon="search"></paper-icon-button>
           <paper-icon-button icon="more-vert"></paper-icon-button>
         </app-toolbar>
         <app-toolbar class="tall">
-          <h1 title>iron-list</h1>
+          <h1 title>plutonium-tree</h1>
         </app-toolbar>
       </app-header>
 
-      <!-- iron-list using the document scroll -->
-      <iron-list items="[[data]]" as="item" scroll-target="html">
+      <!-- plutonium-tree using the document scroll -->
+      <plutonium-tree items="[[data]]" as="item" scroll-target="html">
         <template>
           <div>
             <div class="item" tabindex$="[[tabIndex]]">
@@ -161,7 +161,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             </div>
           </div>
         </template>
-      </iron-list>
+      </plutonium-tree>
 
   </template>
 

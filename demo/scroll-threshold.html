@@ -30,7 +30,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <link rel="import" href="../../paper-spinner/paper-spinner.html">
   <link rel="import" href="../../iron-ajax/iron-ajax.html">
   <link rel="import" href="../../iron-icons/iron-icons.html">
-  <link rel="import" href="../iron-list.html">
+  <link rel="import" href="../plutonium-tree.html">
 
   <style is="custom-style">
 
@@ -64,10 +64,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       margin-right: 10px;
     }
 
-    iron-list {
+    plutonium-tree {
       padding-top: 64px;
       padding-bottom: 16px;
-      --iron-list-items-container: {
+      --plutonium-tree-items-container: {
         max-width: 800px;
         margin: auto;
         margin-top: 60px;
@@ -132,7 +132,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       <div title>Load data using iron-scroll-threshold</div>
     </app-toolbar>
 
-    <iron-list id="list" items="[]" as="person" scroll-target="html">
+    <plutonium-tree id="list" items="[]" as="person" scroll-target="html">
       <template>
         <div>
           <div class="personItem" tabindex$="[[tabIndex]]">
@@ -146,7 +146,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           </div>
         </div>
       </template>
-    </iron-list>
+    </plutonium-tree>
 
     <div class="loadingIndicator">
       <paper-spinner active="{{loadingPeople}}"></paper-spinner> Fetching data
